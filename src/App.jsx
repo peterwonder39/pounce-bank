@@ -41,7 +41,7 @@ function App() {
           <Route path='/security' element={<Security />} />
           <Route path='/AccountLimits' element={<AccountLimit />} />
           <Route path='/finance' element={<Finance/>}/>
-          <Route path='/paybill' element={<Paybill/>}/>
+          <Route path='/paybill' element={<PayBill/>}/>
         </Routes>
       </Router>
     </ThemeContext.Provider>
