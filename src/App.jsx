@@ -15,7 +15,7 @@ import Security from './pages/Security.jsx';
 import AccountLimit from './pages/AccountLimits.jsx';
 import Finance from './pages/Finance.jsx';
 import Loader from './pages/Loader.jsx';
-import PayBill from './pages/Paybill.jsx';
+import PayBill from './pages/PayBill.jsx';
 import ThemeContext from './ThemeContext.js';
 
 
