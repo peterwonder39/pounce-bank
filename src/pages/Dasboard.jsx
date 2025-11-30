@@ -493,7 +493,7 @@ export default function Dashboard() {
                         whileHover={{ scale: 1.08 }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ type: "spring", stiffness: 300 }}
-                        onClick={() => setModal("deposit")}
+                        onClick={() => navigate("/deposit")}
                         style={btn(THEME.accent, "#000")}
                     >
                         <PlusCircle size={14} /> Deposit
@@ -513,10 +513,10 @@ export default function Dashboard() {
                         whileHover={{ scale: 1.08 }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ type: "spring", stiffness: 300 }}
-                        onClick={() => setModal("topup")}
+                        onClick={() => navigate("/withdraw")}
                         style={btn(THEME.accent, "#000")}
                     >
-                        <Smartphone size={14} /> Top-Up
+                        <Smartphone size={14} /> Withdraw
                     </motion.button>
 
                     <motion.button

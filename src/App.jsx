@@ -17,6 +17,8 @@ import Finance from './pages/Finance.jsx';
 import Loader from './pages/Loader.jsx';
 import PayBill from './pages/PayBill.jsx';
 import ThemeContext from './ThemeContext.js';
+import Deposit from './pages/Deposit.jsx';
+import Withdraw from './pages/Withdraw.jsx';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
           <Route path='/AccountLimits' element={<AccountLimit />} />
           <Route path='/finance' element={<Finance/>}/>
           <Route path='/paybill' element={<PayBill/>}/>
+          <Route path='/deposit' element={<Deposit/>}/>
+          <Route path='/withdraw' element={<Withdraw/>}/>
         </Routes>
       </Router>
     </ThemeContext.Provider>
