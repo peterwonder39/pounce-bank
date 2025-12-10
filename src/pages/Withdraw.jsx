@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -16,6 +16,7 @@ import {
 
 export default function Withdraw() {
     const navigate = useNavigate();
+    const [selected, setSelected] = useState(null);
 
     const options = [
         { name: "CashApp", icon: DollarSign },
@@ -31,7 +32,6 @@ export default function Withdraw() {
             className="min-vh-100  flex-column align-items-center p-5"
             style={{
                 background: "linear-gradient(135deg,#0f2027, #203a43, #2c5364)",
-                
             }}
         >
             {/* Title */}
@@ -54,21 +54,27 @@ export default function Withdraw() {
                 {options.map((item, index) => {
                     const Icon = item.icon;
                     return (
-                        <motion.button
-                            key={index}
-                            className="btn text-white py-3 fw-semibold d-flex align-items-center justify-content-between px-4 shadow-sm"
-                            style={{
-                                background: "#00b894",
-                                borderRadius: "14px",
-                                fontSize: "17px",
-                            }}
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            
-                        >
-                            <span>{item.name}</span>
-                            <Icon size={22} />
-                        </motion.button>
+                        <div key={index}>
+                            <motion.button
+                                className="btn text-white py-3 fw-semibold d-flex align-items-center justify-content-between px-4 shadow-sm"
+                                style={{
+                                    background: "#00b894",
+                                    borderRadius: "14px",
+                                    fontSize: "17px",
+                                }}
+                                whileHover={{ scale: 1.03 }}
+                                whileTap={{ scale: 0.97 }}
+                                onClick={() => setSelected(index)}
+                            >
+                                <span>{item.name}</span>
+                                <Icon size={22} />
+                            </motion.button>
+                            {selected === index && (
+                                <div style={{ marginTop: 8, color: '#fff', background: 'rgba(0,0,0,0.15)', borderRadius: 8, padding: '10px 16px', fontWeight: 500, fontSize: 15 }}>
+                                    A minimum of $200 deposit is required in your account to activate and  enable withdrawal. Kindly deposit now!
+                                </div>
+                            )}
+                        </div>
                     );
                 })}
             </motion.div>
@@ -86,7 +92,6 @@ export default function Withdraw() {
                 whileTap={{ scale: 0.93 }}
             >
                 <ArrowLeft size={18} />
-
             </motion.button>
         </div>
     );
