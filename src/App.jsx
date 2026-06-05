@@ -19,6 +19,8 @@ import PayBill from './pages/PayBill.jsx';
 import ThemeContext from './ThemeContext.js';
 import Deposit from './pages/Deposit.jsx';
 import Withdraw from './pages/Withdraw.jsx';
+import ProtectedRoute from "./pages/ProtectedRoute";
+
 
 
 function App() {
@@ -35,17 +37,20 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path='/transfer' element={<Transfer />} />
-          <Route path='/success' element={<Success />} />
-          <Route path='/bankcard' element={<Bankcard />} />
-          <Route path='/security' element={<Security />} />
-          <Route path='/AccountLimits' element={<AccountLimit />} />
-          <Route path='/finance' element={<Finance/>}/>
-          <Route path='/paybill' element={<PayBill/>}/>
-          <Route path='/deposit' element={<Deposit/>}/>
-          <Route path='/withdraw' element={<Withdraw/>}/>
+
+          <Route element={<ProtectedRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/transfer" element={<Transfer />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/bankcard" element={<Bankcard />} />
+            <Route path="/security" element={<Security />} />
+            <Route path="/AccountLimits" element={<AccountLimit />} />
+            <Route path="/finance" element={<Finance />} />
+            <Route path="/paybill" element={<PayBill />} />
+            <Route path="/deposit" element={<Deposit />} />
+            <Route path="/withdraw" element={<Withdraw />} />
+          </Route>
         </Routes>
       </Router>
     </ThemeContext.Provider>

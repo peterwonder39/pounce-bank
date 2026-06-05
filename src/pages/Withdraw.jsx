@@ -19,10 +19,10 @@ export default function Withdraw() {
     const [selected, setSelected] = useState(null);
 
     const options = [
-        { name: "CashApp", icon: DollarSign },
+        { name: "Bank transfer", icon: DollarSign },
         { name: "PayPal", icon: Send },
-        { name: "Chase Bank", icon: Landmark },
-        { name: "Monzo", icon: Wallet },
+        { name: "Wise", icon: Landmark },
+        { name: "bunq", icon: Wallet },
         { name: "Venmo", icon: Building },
         { name: "Revolut", icon: CreditCard },
     ];
@@ -34,6 +34,19 @@ export default function Withdraw() {
                 background: "linear-gradient(135deg,#0f2027, #203a43, #2c5364)",
             }}
         >
+            <motion.button
+                onClick={() => navigate("/dashboard")}
+                className="btn mb-3 d-flex align-items-center gap-2 text-white"
+                style={{
+                    background: "rgba(255,255,255,0.15)",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    borderRadius: "12px",
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.93 }}
+            >
+                <ArrowLeft size={18} />
+            </motion.button>
             {/* Title */}
             <motion.h2
                 className="fw-bold text-white mb-4"
@@ -71,7 +84,7 @@ export default function Withdraw() {
                             </motion.button>
                             {selected === index && (
                                 <div style={{ marginTop: 8, color: '#fff', background: 'rgba(0,0,0,0.15)', borderRadius: 8, padding: '10px 16px', fontWeight: 500, fontSize: 15 }}>
-                                    A minimum of $200 deposit is required in your account to activate and  enable withdrawal. Kindly deposit now!
+                                    contact admin for withdrawal!
                                 </div>
                             )}
                         </div>
@@ -80,19 +93,7 @@ export default function Withdraw() {
             </motion.div>
 
             {/* Back Button */}
-            <motion.button
-                onClick={() => navigate("/dashboard")}
-                className="btn mb-3 d-flex align-items-center gap-2 text-white"
-                style={{
-                    background: "rgba(255,255,255,0.15)",
-                    border: "1px solid rgba(255,255,255,0.3)",
-                    borderRadius: "12px",
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.93 }}
-            >
-                <ArrowLeft size={18} />
-            </motion.button>
+
         </div>
     );
 }

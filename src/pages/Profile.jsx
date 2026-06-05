@@ -172,12 +172,12 @@ const Profile = () => {
                     <ProfileRow
                         icon={<CreditCard size={18} />}
                         label="Balance"
-                        value={`£${Number(user.balance).toLocaleString("en-GB")}`}
+                        value={`$${Number(user.balance).toLocaleString("en-US")}`}
                     />
                     <ProfileRow
                         icon={<CreditCard size={18} />}
                         label="Account Limit"
-                        value={`£${user.accountLimit ? Number(user.accountLimit).toLocaleString("en-GB") : '0'}`}
+                        value={`$${user.accountLimit ? Number(user.accountLimit).toLocaleString("en-US") : '0'}`}
                     />
                     <ProfileRow
                         icon={<CalendarDays size={18} />}
@@ -224,7 +224,7 @@ const Profile = () => {
                     textAlign: "center",
                 }}
             >
-                © {new Date().getFullYear()} Pounce Bank — Secure, Smart & Seamless 💳
+                © {new Date().getFullYear()} PC Bank — Secure, Smart & Seamless 💳
             </div>
         </div>
     );

@@ -51,7 +51,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                Welcome to <span style={{ color: "#00b894" }}>pounce bank</span> 💳
+                Welcome to <span style={{ color: "#00b894" }}>PC bank</span> 💳
             </motion.h1>
 
             

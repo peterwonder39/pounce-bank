@@ -19,7 +19,33 @@ const SecurityCenter = () => {
                 padding: "40px 20px",
                 position: "relative",
             }}
+
         >
+            <motion.button
+                onClick={() => navigate("/dashboard")}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                style={{
+                    // position: "absolute",
+                    backgroundColor: "#00b894",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "30px",
+                    padding: "10px 18px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontWeight: "600",
+                    cursor: "pointer",
+                    boxShadow: "0 3px 10px rgba(0,0,0,0.2)",
+                    transition: "0.3s",
+                }}
+                onMouseOver={(e) => (e.target.style.backgroundColor = "#019670")}
+                onMouseOut={(e) => (e.target.style.backgroundColor = "#00b894")}
+            >
+                <ArrowLeft size={18} /> 
+            </motion.button>
             
 
 
@@ -202,35 +228,11 @@ const SecurityCenter = () => {
             >
                 <p>
                      <strong>Security Tip:</strong> Never share your PIN or password with anyone —
-                    even if they claim to be from Pounce Bank.
+                    even if they claim to be from PC Bank.
                 </p>
             </motion.div>
 
-            <motion.button
-                onClick={() => navigate("/dashboard")}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                style={{
-                    // position: "absolute",
-                    backgroundColor: "#00b894",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "30px",
-                    padding: "10px 18px",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                    boxShadow: "0 3px 10px rgba(0,0,0,0.2)",
-                    transition: "0.3s",
-                }}
-                onMouseOver={(e) => (e.target.style.backgroundColor = "#019670")}
-                onMouseOut={(e) => (e.target.style.backgroundColor = "#00b894")}
-            >
-                <ArrowLeft size={18} /> 
-            </motion.button>
+            
         </div>
     );
 };

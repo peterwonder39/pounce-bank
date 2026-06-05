@@ -69,7 +69,7 @@ const PayBill = () => {
                 onMouseOver={(e) => (e.target.style.backgroundColor = "#00b89420")}
                 onMouseOut={(e) => (e.target.style.backgroundColor = "transparent")}
             >
-                <ArrowLeft size={14} /> 
+                <ArrowLeft size={14} />
             </button>
 
             {/* Header */}
@@ -84,7 +84,7 @@ const PayBill = () => {
                     fontWeight: "700",
                 }}
             >
-                Pay Your Bills Instantly 
+                Pay Your Bills Instantly
             </motion.h1>
 
             <motion.p
@@ -197,7 +197,7 @@ const PayBill = () => {
                 }}
             >
                 💳 Fast, secure, and reliable payments powered by{" "}
-                <span style={{ color: "#00b894", fontWeight: "600" }}>Pounce Bank</span>
+                <span style={{ color: "#00b894", fontWeight: "600" }}>PC Bank</span>
             </motion.div>
         </div>
     );

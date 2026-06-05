@@ -41,6 +41,23 @@ const BankCard = () => {
                 padding: "50px 20px",
             }}
         >
+            <motion.button
+                style={{
+                    marginTop: "10px",
+                    backgroundColor: "#00b894",
+                    color: "#fff",
+                    border: "none",
+                    padding: "12px 25px",
+                    borderRadius: "30px",
+                    fontSize: "1rem",
+                    fontWeight: "600",
+                    cursor: "pointer",
+                }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => navigate("/dashboard")}
+            >
+                ← 
+            </motion.button>
             {/* Heading */}
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
@@ -176,23 +193,7 @@ const BankCard = () => {
             </div>
 
             {/* Back button */}
-            <motion.button
-                style={{
-                    marginTop: "50px",
-                    backgroundColor: "#00b894",
-                    color: "#fff",
-                    border: "none",
-                    padding: "12px 25px",
-                    borderRadius: "30px",
-                    fontSize: "1rem",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                }}
-                whileHover={{ scale: 1.05 }}
-                onClick={() => navigate("/dashboard")}
-            >
-                ← 
-            </motion.button>
+            
         </div>
     );
 };

@@ -122,7 +122,7 @@ const Transfer = () => {
             >
                 <div className="d-flex align-items-center mb-3">
                     <button
-                        className="btn btn-outline-light btn-sm me-2"
+                        className="btn  btn-sm me-2"
                         onClick={() => navigate("/dashboard")}
                     >
                         <ArrowLeftCircle size={18} />

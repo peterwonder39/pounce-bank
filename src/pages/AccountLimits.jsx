@@ -96,7 +96,7 @@ const AccountLimit = () => {
                     style={{ width: "100%" }}
                 />
                 <div style={{ textAlign: "right", color: "#00b894", fontWeight: 600 }}>
-                    £{Number(dailyLimit).toLocaleString("en-GB")}
+                    ${Number(dailyLimit).toLocaleString("en-US")}
                 </div>
             </motion.div>
 
@@ -128,7 +128,7 @@ const AccountLimit = () => {
                     style={{ width: "100%" }}
                 />
                 <div style={{ textAlign: "right", color: "#00b894", fontWeight: 600 }}>
-                    £{Number(atmLimit).toLocaleString("en-GB")}
+                    ${Number(atmLimit).toLocaleString("en-US")}
                 </div>
             </motion.div>
 
@@ -160,7 +160,7 @@ const AccountLimit = () => {
                     style={{ width: "100%" }}
                 />
                 <div style={{ textAlign: "right", color: "#00b894", fontWeight: 600 }}>
-                    £{Number(weeklyLimit).toLocaleString("en-GB")}
+                    ${Number(weeklyLimit).toLocaleString("en-US")}
                 </div>
             </motion.div>
 

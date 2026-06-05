@@ -52,7 +52,7 @@ const MOCK_TRANSACTIONS = [
 ];
 
 const formatCurrency = (n) =>
-    n.toLocaleString("en-GB", { style: "currency", currency: "GBP" });
+    n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
 
 const SmallBarChart = ({ data = [], width = 300, height = 120 }) => {
@@ -195,9 +195,9 @@ export default function Dashboard() {
         setTransactions((s) => [tx, ...s]);
     };
 
-    
 
-    
+
+
 
     // logout: clear storage and redirect
     const doLogout = () => {
@@ -424,13 +424,13 @@ export default function Dashboard() {
                                     ? user.firstName.toUpperCase()
                                     : user.fullName
                                         ? user.fullName.split(" ")[0].toUpperCase()
-                                        : "USER" } 👋
+                                        : "USER"} 👋
                             </h2>
-                            
+
                         </div>
                     </div>
 
-                    
+
                 </div>
 
                 {/* Balance + Chart Row */}

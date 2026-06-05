@@ -22,9 +22,9 @@ const THEME = {
 };
 
 const currencyFormat = (amount) =>
-    new Intl.NumberFormat("en-GB", {
+    new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "GBP",
+        currency: "USD",
     }).format(amount);
 
 const Finance = () => {
@@ -254,7 +254,7 @@ const Finance = () => {
                         >
                             <div>
                                 <div style={{ fontWeight: 600 }}>{tx.desc}</div>
-                                <div style={{ fontSize: 12, color: "#ccc" }}>{tx.date}</div>
+                                <div style={{ fontSize: 12, color: "#ccc" }}>{}</div>
                             </div>
                             <div
                                 style={{
@@ -281,7 +281,7 @@ const Finance = () => {
                 }}
             >
                 <Wallet2 size={14} style={{ marginRight: 4 }} />
-                Pounce Bank Finance — Empowering Smart Spending 
+                PC Bank Finance — Empowering Smart Spending 
             </div>
         </div>
     );
