@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // Format as GBP
 const formatCurrency = (n) => {
     if (!n && n !== 0) return "";
-    return Number(n).toLocaleString("en-GB", { style: "currency", currency: "GBP" });
+    return Number(n).toLocaleString("en-US", { style: "currency", currency: "USD" });
 };
 import { useLocation, useNavigate } from "react-router-dom";
 import { CheckCircle } from "lucide-react";

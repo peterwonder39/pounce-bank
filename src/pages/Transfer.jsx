@@ -8,7 +8,7 @@ import Loader from "../pages/Loader";
 // Format as GBP
 const formatCurrency = (n) => {
     if (!n && n !== 0) return "";
-    return Number(n).toLocaleString("en-GB", { style: "currency", currency: "GBP" });
+    return Number(n).toLocaleString("en-US", { style: "currency", currency: "USD" });
 };
 
 const Transfer = () => {
